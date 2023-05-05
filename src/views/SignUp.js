@@ -10,7 +10,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import Alert from "react-bootstrap/Alert";
 import { Link } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
-
+import "../css/authStyles.css"
 export default function SignUp() {
   const [name, setName] = useState("");
   const [usn, setUsn] = useState("");
@@ -72,7 +72,7 @@ export default function SignUp() {
   };
 
   return (
-    <Container fluid="md">
+    <Container fluid="md" className="centerContainer">
       <Row>
         <Col>
           <h1>Sign Up</h1>

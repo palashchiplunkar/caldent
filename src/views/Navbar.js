@@ -8,9 +8,15 @@ import { signOut } from 'firebase/auth'
 import {auth } from "../firebase/firebaseConfig"
 import { Link } from "react-router-dom";
 import { useAuthValue } from "../AuthContext";
-
+import { useNavigate } from "react-router-dom";
 function NavComponent() {
   const { currentUser } = useAuthValue();
+const naviage=useNavigate();
+  const logOut=()=>{
+    signOut(auth)
+naviage("/login")
+  }
+
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -49,7 +55,7 @@ function NavComponent() {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    <Dropdown.Item onClick={()=>signOut(auth)}>Log Out</Dropdown.Item>
+                    <Dropdown.Item onClick={logOut}>Log Out</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </>

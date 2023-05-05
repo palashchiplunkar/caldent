@@ -8,7 +8,7 @@ import { auth, db } from "../firebase/firebaseConfig";
 import { doc, setDoc } from "firebase/firestore";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import Alert from "react-bootstrap/Alert";
-
+import "../css/authStyles.css"
 import { useNavigate } from "react-router-dom";
 export default function Login() {
     const navigate=useNavigate();
@@ -45,7 +45,7 @@ export default function Login() {
     }
   };
   return (
-    <Container fluid="md">
+    <Container fluid="md" className="centerContainer">
       <Row>
         <Col>
           <h1>Login</h1>

@@ -22,7 +22,6 @@ function App() {
       <AuthProvider value={{ currentUser }}>
         <BrowserRouter>
           <NavComponent />
-
           <Routes>
             <Route path="/" element={<HomeComponent />} />
             <Route path="/login" element={<Login />} />
@@ -34,5 +33,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
